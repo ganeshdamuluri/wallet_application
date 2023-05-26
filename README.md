@@ -31,7 +31,7 @@
    - from the postman application -> import -> select collection.json ->open
 
 ## DB Setup
-   - Download and install DB Browser for sqLite (https://sqlitebrowser.org/dl/)
+   - Download and install DB Browser for [sqLite](https://sqlitebrowser.org/dl/)
    - click on `open database` browse the file path to your application and under data select `walletDB.db`
      your file location to project/WALLET-APPLICATION/data/walletDB.db
 
