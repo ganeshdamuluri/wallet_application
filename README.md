@@ -15,14 +15,14 @@
   - SqLite
 
 ## Prerequisites 
-  - nodejs
-  - npm
-  - postman
-  - DB Browser for sqLite ( to check the DB)
+  - [nodejs](https://nodejs.org/en/download).
+  - [npm](https://nodejs.org/en/download).
+  - [postman](https://www.postman.com/downloads/)
+  - [SqLiteBrowser](https://sqlitebrowser.org/dl/) for database
 
 ## Setup Application
-   - Unzip in local windows
-   - From the root directory run the following command
+   - Unzip in wallet-application in local windows or clone from [gitHub](https://github.com/ganeshdamuluri/wallet_application)
+   - From the root directory *wallet-application* run the following command (`$ cd wallet-application`)
 		`npm i` or `npm install`
    - To run the application using 
 		`nodemon` or `node server.js`
