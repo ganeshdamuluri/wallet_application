@@ -22,6 +22,13 @@
 
 ## Setup Application
    - Unzip in wallet-application in local windows or clone from [gitHub](https://github.com/ganeshdamuluri/wallet_application)
+   - create new *.env* using command (`$ cp  wallet-application/.env.example  wallet-application/.env`) and paste following
+		`NODE_ENV=development
+		DB_HOST=localhost
+		DB_DIALECT=sqlite
+		DB_ALIAS=false
+		DB_FILE=./data/walletDB.db
+		TOKEN_KEY=wallettransationsapp`
    - From the root directory *wallet-application* run the following command (`$ cd wallet-application`)
 		`npm i` or `npm install`
    - To run the application using 
