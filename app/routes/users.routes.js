@@ -1,13 +1,14 @@
 module.exports = app => {
     const users = require("../controllers/users.controller.js");
-    const middleware = require("../middleware/auth.middleware.js");
+    const authMiddleware = require("../middleware/auth.middleware.js");
+    const responseMiddleware = require("../middleware/response.middleware.js");
     const bodyParser = require("body-parser");
   
     var router = require("express").Router();
 
-    router.get("/", users.getAll);
-    router.get("/:id", users.findOne);
-    router.put("/update", [bodyParser.json(), middleware], users.update);
+    router.get("/", responseMiddleware, users.getAll);
+    router.get("/:id", responseMiddleware, users.findOne);
+    router.put("/update", [bodyParser.json(), authMiddleware, responseMiddleware], users.update);
 
     app.use('/api/users', router);
   };
