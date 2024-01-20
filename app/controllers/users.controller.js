@@ -49,3 +49,17 @@ exports.update = async (req, res) => {
     });
   }
 };
+
+exports.updateUser = async (req, res) => {
+  var userId = req.params.id;
+  const user = await users.findByPk(userId);
+  if (user) {
+    user.update(req.body);
+    const uUser = await users.findByPk(userId);
+    res.status(200).send(uUser);
+  } else {
+    res.status(500).send({
+      message: "User not found",
+    });
+  }
+};

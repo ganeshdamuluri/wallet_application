@@ -8,7 +8,8 @@ module.exports = app => {
 
     router.get("/", responseMiddleware, users.getAll);
     router.get("/:id", responseMiddleware, users.findOne);
-    router.put("/update", [bodyParser.json(), authMiddleware, responseMiddleware], users.update);
+    router.patch("/", [bodyParser.json(), authMiddleware, responseMiddleware], users.update);
+    router.patch("/:id", [bodyParser.json(), responseMiddleware], users.updateUser);
 
     app.use('/api/users', router);
   };
