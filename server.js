@@ -8,16 +8,15 @@ db.sequelize.sync();
 
 var corsOptions = {
   origin: '*',
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
 };
+
+app.options('*', cors());
 
 require("./app/routes/auth.routes")(app);
 require("./app/routes/users.routes")(app);
 require("./app/routes/wallet.routes")(app);
 
 app.use(cors(corsOptions));
-app.options('*', cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
